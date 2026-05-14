@@ -1,7 +1,7 @@
 {
   "_readme": "This is the single config file for your BakerData.IO landing page. Edit any value here and the site updates automatically. No touching source code required.",
   "meta": {
-    "title": "BakerData.IO — Fractional Technical Co-Founder",
+    "title": "BakerData.IO | Fractional Technical Co-Founder",
     "description": "Taking startups from idea to revenue. No equity. No long contracts.",
     "url": "https://bakerdata.io",
     "ogImage": "/og-image.jpg"
