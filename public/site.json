@@ -1,0 +1,259 @@
+{
+  "_readme": "This is the single config file for your BakerData.IO landing page. Edit any value here and the site updates automatically. No touching source code required.",
+  "meta": {
+    "title": "BakerData.IO — Fractional Technical Co-Founder",
+    "description": "Taking startups from idea to revenue. No equity. No long contracts.",
+    "url": "https://bakerdata.io",
+    "ogImage": "/og-image.jpg"
+  },
+  "nav": {
+    "logo": "BakerData.IO",
+    "links": [
+      {
+        "label": "Process",
+        "href": "#process"
+      },
+      {
+        "label": "Testimonials",
+        "href": "#testimonial"
+      },
+      {
+        "label": "Toolkit",
+        "href": "#stack"
+      },
+      {
+        "label": "Work",
+        "href": "#clients"
+      }
+    ],
+    "cta": {
+      "label": "Work With Me",
+      "href": "#contact"
+    }
+  },
+  "hero": {
+    "label": "Who I Am",
+    "headlinePre": "Hi, I'll be your",
+    "headlineAccent": "Fractional",
+    "headlinePost": [
+      "Technical",
+      "Co-Founder"
+    ],
+    "subheading": "Let's take your startup from idea to revenue.",
+    "cta": {
+      "label": "Work With Me",
+      "href": "#contact"
+    },
+    "headshot": "/headshot.png",
+    "headshotAlt": "BakerData.IO — Fractional Technical Co-Founder",
+    "headshotCaption": "Fractional CTO & Co-Founder"
+  },
+  "process": {
+    "label": "My Process",
+    "headlinePre": "Launching a startup is easy.",
+    "headlineAccent": "Growing a user base",
+    "headlinePost": "is not.",
+    "loomVideoId": "",
+    "_bgVideoNote": "Export your Loom as MP4, place at /public/process-bg.mp4, then set bgVideo below. Leave empty to show the embedded Loom player instead.",
+    "bgVideo": "process-bg.mp4",
+    "steps": [
+      {
+        "number": "01",
+        "title":  "Diagnose",
+        "desc":   "We review your product, positioning, and target market to identify exactly what's holding you back from your first customers"
+      },
+      {
+        "number": "02",
+        "title":  "Strategise",
+        "desc":   "You get a clear, actionable roadmap covering your ICP, messaging, and the fastest path to revenue"
+      },
+      {
+        "number": "03",
+        "title":  "Build",
+        "desc":   "From MVP to scale, I handle the technical execution so you can focus on growing the business"
+      }
+    ]
+  },
+
+  "testimonials": {
+    "label": "What Founders Say",
+    "autoplayMs": 10000,
+    "items": [
+      {
+        "quote":   "Josh has been a dependable and professional asset throughout the development of TierUp, playing an invaluable role in turning the platform into a functional reality.",
+        "name":    "Katie Umpleby",
+        "role":    "Co-Founder",
+        "company": "TierUp",
+        "url":     "tierupplus.com"
+      },
+      {
+        "quote":   "Josh helped to identify target audience for my mobile app. He has keen eye and insight in SaaS development.",
+        "name":    "Ali Nawaz",
+        "role":    "Founder",
+        "company": "PetVax.AI",
+        "url":     "petvax.ai"
+      },
+      {
+        "quote":   "Josh is great at what he does, and is willing to collaborate to get the best results!",
+        "name":    "Nathan Lawlor",
+        "role":    "Senior iOS Engineer",
+        "company": "Jaguar Land Rover",
+        "url":     "#"
+      }
+    ]
+  },
+
+  "stack": {
+    "label":    "My Toolkit",
+    "headline": "Built with the right tools.",
+    "items": [
+       {
+        "name": "Vue.js",
+        "deviconClass": "devicon-vuejs-plain colored"
+      },
+      {
+        "name": "React",
+        "deviconClass": "devicon-react-original colored"
+      },
+      {
+        "name": "Node.js",
+        "deviconClass": "devicon-nodejs-plain colored"
+      },
+      {
+        "name": "Python",
+        "deviconClass": "devicon-python-plain colored"
+      },
+      {
+        "name": "PostgreSQL",
+        "deviconClass": "devicon-postgresql-plain colored"
+      },
+      {
+        "name": "MongoDB",
+        "deviconClass": "devicon-mongodb-plain colored"
+      },
+      {
+        "name": "Docker",
+        "deviconClass": "devicon-docker-plain colored"
+      },
+      {
+        "name": "Supabase",
+        "deviconClass": "devicon-supabase-plain colored"
+      },
+      {
+        "name": "Stripe",
+        "deviconClass": "",
+        "abbr": "STR"
+      },
+      {
+        "name": "Flask",
+        "deviconClass": "devicon-flask-original"
+      },
+      {
+        "name": "HTML5",
+        "deviconClass": "devicon-html5-plain colored"
+      },
+      {
+        "name": "CSS3",
+        "deviconClass": "devicon-css3-plain colored"
+      },
+      {
+        "name": "JavaScript",
+        "deviconClass": "devicon-javascript-plain colored"
+      },
+      {
+        "name": "Unity",
+        "deviconClass": "",
+        "abbr": "U5"
+      },
+      {
+        "name": "C++",
+        "deviconClass": "devicon-cplusplus-plain colored"
+      },
+      {
+        "name": "Git",
+        "deviconClass": "devicon-git-plain colored"
+      },
+      {
+        "name": "Linux",
+        "deviconClass": "devicon-linux-plain"
+      },
+      {
+        "name": "Fly.io",
+        "deviconClass": "",
+        "abbr": "FLY"
+      },
+      {
+        "name": "Azure",
+        "deviconClass": "devicon-azure-plain colored"
+      }
+    ]
+  },
+
+  "clients": {
+    "label":    "Startups I've Worked With",
+    "headline": "Trusted by founders.",
+    "items": [
+      { "name": "AssetUnlock.ai", "logoSrc": "" },
+      { "name": "TierUp", "logoSrc": "/TierUpLogo.jpeg" },
+      { "name": "Harpoonr", "logoSrc": "/HarpoonrLogo.png" },
+      { "name": "PetVax.ai", "logoSrc": "/PetVaxLogo.png" }
+    ]
+  },
+
+  "cta": {
+    "label": "Let's Talk",
+    "headline": "Ready to build something",
+    "headlineAccent": "real?",
+    "subheading": "No equity. No long contracts. Fast, focused technical leadership when you need it most.",
+    "paths": [
+      {
+        "label": "Path A",
+        "title": "I'm technical in need of growth support",
+        "desc": "You've built the product. Now you need someone who can bridge the gap between engineering and revenue.",
+        "href": "/contact?path=technical"
+      },
+      {
+        "label": "Path B",
+        "title": "I'm marketing oriented in need of technical support",
+        "desc": "You know your market and your customer. Now you need a technical co-founder to actually build it.",
+        "href": "/contact?path=marketing"
+      }
+    ],
+    "social": [
+      {
+        "label": "LinkedIn",
+        "icon": "linkedin",
+        "href": "https://linkedin.com/in/bakerdataio"
+      },
+      {
+        "label": "Email",
+        "icon": "email",
+        "href": "mailto:hello@bakerdata.io"
+      },
+      {
+        "label": "Instagram",
+        "icon": "instagram",
+        "href": "https://instagram.com/bakerdata.io"
+      }
+    ]
+  },
+  "contact": {
+    "label": "Get In Touch",
+    "headline": "Let's talk.",
+    "subheading": "Tell me about your startup and I'll be in touch within 24 hours.",
+    "formspreeId": "",
+    "paths": {
+      "technical": {
+        "label": "Technical founder",
+        "description": "You've built it — now let's grow it."
+      },
+      "marketing": {
+        "label": "Marketing founder",
+        "description": "You know the market — now let's build it."
+      }
+    }
+  },
+  "footer": {
+    "marqueeText": "BAKERDATA.IO"
+  }
+}

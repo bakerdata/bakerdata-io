@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold:        #F5C26B;
+  --teal:        #4AABB8;
+  --ink:         #0f0f0f;
+  --ink-mid:     #3a3a3a;
+  --ink-muted:   #888888;
+  --paper:       #F7F5F0;
+  --paper-warm:  #EFECE5;
+  --paper-dark:  #E0DCD3;
+  --pad:         clamp(2rem, 5vw, 5rem);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  cursor: none !important;
+}
+
+/* ── Scroll snap must be on html AND the scroll container ── */
+html, body, #root {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* React renders into #root — snap must live here, not html */
+#root {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  overflow: hidden; /* let #root scroll */
+}
+
+@media (max-width: 768px) {
+  #root { scroll-snap-type: none; overflow-y: auto; }
+}
+
+::-webkit-scrollbar          { width: 3px; }
+::-webkit-scrollbar-track    { background: var(--paper); }
+::-webkit-scrollbar-thumb    { background: var(--gold); }
+
+/* ── Keyframes — defined in CSS so inline styles can use them ── */
+@keyframes scrollLeft {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Section base ── */
+.bd-section {
+  height: 100svh;          /* exactly one viewport, no overflow */
+  min-height: 560px;       /* floor for very short screens */
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: calc(var(--pad) * 1.6) var(--pad) var(--pad);
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .bd-section {
+    height: auto;
+    min-height: auto;
+    padding: 5rem 1.5rem 3rem;
+    scroll-snap-align: none;
+    scroll-snap-stop: normal;
+  }
+}
+
+/* ── Section label ── */
+.bd-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  font-weight: 400;
+  position: absolute;
+  top: var(--pad);
+  left: var(--pad);
+  transition: color 0.3s;
+}
+
+@media (max-width: 768px) {
+  .bd-label { top: 1.5rem; left: 1.5rem; }
+}
+
+/* ── Custom cursor ── */
+.bd-cursor {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--ink);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.18s ease, height 0.18s ease, background 0.18s ease;
+  will-change: left, top;
+}
+.bd-cursor.hover {
+  width: 34px;
+  height: 34px;
+  background: var(--gold);
+  mix-blend-mode: multiply;
+}
+/* On dark sections the cursor flips to paper-coloured */
+.bd-cursor.dark-bg {
+  background: var(--paper);
+}
+.bd-cursor.dark-bg.hover {
+  background: var(--gold);
+  mix-blend-mode: normal;
+}
+
+/* ── Buttons ── */
+.bd-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--ink);
+  color: var(--paper) !important;
+  padding: 14px 32px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1.5px solid var(--ink);
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+.bd-btn:hover { background: var(--teal); border-color: var(--teal); transform: translateY(-1px); }
+
+.bd-btn-ghost {
+  background: transparent;
+  color: var(--ink) !important;
+  border: 1.5px solid var(--ink);
+}
+.bd-btn-ghost:hover { background: var(--ink); color: var(--paper) !important; }
+
+/* ── Reveal animation ── */
+.bd-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.bd-reveal.in { opacity: 1; transform: translateY(0); }
+.bd-d1 { transition-delay: 0.08s; }
+.bd-d2 { transition-delay: 0.20s; }
+.bd-d3 { transition-delay: 0.34s; }
+.bd-d4 { transition-delay: 0.50s; }
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.8); }
+}
+
+/* ── Devicon overrides ── */
+.bd-devicon {
+  font-size: 1.8rem;
+  line-height: 1;
+  transition: color 0.2s, transform 0.2s;
+  color: var(--ink-muted);
+}
+.stack-item:hover .bd-devicon {
+  color: var(--ink);
+  transform: scale(1.1);
+}
